@@ -1,16 +1,12 @@
-"use client";
+import HomePage from "@/components/pages/homePage";
 
-import { useState, useEffect } from "react";
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "@/amplify/data/resource";
-import "./../app/app.css";
-
-
-export default function App() {
-  const name = useEffect(() => {
-    // listTodos();
-  }, []);
-
-
-  return <div>Welcome</div>;
+export default function Home() {
+  return (
+    <>
+      <div>
+        <script type="text/javascript" src="/script.js"></script>
+        <HomePage />
+      </div>
+    </>
+  );
 }

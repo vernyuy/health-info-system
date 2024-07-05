@@ -18,20 +18,22 @@ export default function HealthUnitPage() {
   const router = useRouter();
   const [lat, setLat] = useState(0);
   const [lng, setLng] = useState(0);
-  const [pharmacies, setPharmacies] = useState<Array<Schema["HealthCareProvider"]["type"]>>([]);
+  const [pharmacies, setPharmacies] = useState<
+    Array<Schema["HealthCareProvider"]["type"]>
+  >([]);
   const [nearPharms, setNearPharms]: any = useState([]);
 
   useEffect(() => {
     getAllPharmacies();
-    console.log(pharmacies)
-          pharmacies.map((p: any)=>{
-            if(p.location?.lat - 4 > 2 ){
-              console.log(p.location.lat)
-              // setNearPharms([...nearPharms, p])
-            }else{
-              console.log("not near", p.location.lat)
-            }
-          })
+    console.log(pharmacies);
+    pharmacies.map((p: any) => {
+      if (p.location?.lat - 4 > 2) {
+        console.log(p.location.lat);
+        // setNearPharms([...nearPharms, p])
+      } else {
+        console.log("not near", p.location.lat);
+      }
+    });
   }, []);
   const getAllPharmacies = async () => {
     // console.log("getting all pharmacies")
@@ -39,29 +41,28 @@ export default function HealthUnitPage() {
       client.models.HealthCareProvider.observeQuery().subscribe({
         next: (data) => setPharmacies([...data.items]),
       });
-      
     } catch (err) {
       console.log(err);
     }
   };
 
-  const getNearByPharmacies = async () =>{
-      // console.log("getting all pharmacies")
-      try{
-          const res = await client.models.Pharmacy.list({
-              filter:{
-                  and: [
-                      {
-                          location: { eq: '1' }
-                      }
-                  ]
-              }
-          });
-        //   setPharmacies(res.data)
-      }catch(err){
-          console.log(err)
-      }
-  }
+  const getNearByPharmacies = async () => {
+    // console.log("getting all pharmacies")
+    try {
+      const res = await client.models.Pharmacy.list({
+        filter: {
+          and: [
+            {
+              location: { eq: "1" },
+            },
+          ],
+        },
+      });
+      //   setPharmacies(res.data)
+    } catch (err) {
+      console.log(err);
+    }
+  };
   const handleSignOut = async () => {
     await signOut();
     router.replace("/signin");
@@ -90,13 +91,8 @@ export default function HealthUnitPage() {
       </Script>
       <div className="bg-blue-100/40 pt-4">
         <input className="hidden" type="number" id="id1" name="lat" />
-        <input className="hidden"  type="number" id="id2" name="lng" />
+        <input className="hidden" type="number" id="id2" name="lng" />
         <div className="h-full w-full">
-          <div className="h-full w-full bg-blur sticky top-5 z-50">
-            <div className="mx-auto bg-white/40 w-[85%] border shadow shadow-lg rounded-full">
-              <NavBar />
-            </div>
-          </div>
           <div className="h-[70%]">
             <div className=" my-auto sm:flex w-full px-4 sm:px-20 justify-between gap-4">
               <div className="mt-16 mx-auto">
@@ -166,23 +162,24 @@ export default function HealthUnitPage() {
                 <button>get near by</button>
               </div> */}
               <div className=" px-1 sm:px-24 pt-10 flex flex-wrap justify-evenly gap-3">
-                {pharmacies.map((pharm: any) =>
-                  // pharm.location?.lat - 4 > 2 ? (
+                {pharmacies.map(
+                  (pharm: any) => (
+                    // pharm.location?.lat - 4 > 2 ? (
                     <FeatureCard
                       key={pharm.id}
                       cardData={{
                         title: pharm.name,
                         description: pharm.description,
                         url: "",
-                        image: pharm.imageUrl?pharm.imageUrl:"/pharm.png",
+                        image: pharm.imageUrl ? pharm.imageUrl : "/pharm.png",
                       }}
                     />
+                  )
                   // ) : (
                   //   <div></div>
                   // )
                 )}
               </div>
-              <Footer/>
             </div>
           </div>
         </div>

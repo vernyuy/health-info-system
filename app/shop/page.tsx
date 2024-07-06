@@ -1,5 +1,6 @@
 import Navbar from "@/components/common-components/navbar";
 import Footer from "@/components/footer";
+import Link from "next/link";
 
 export default function Pharmacy() {
   return (
@@ -8,38 +9,38 @@ export default function Pharmacy() {
 
       <div className="w-full flex justify-center mt-14 px-4 sm:px-6 lg:px-8">
         <div className="bg-blue-50 min-h-52 w-full max-w-screen-xl flex justify-center text-center items-center rounded-md">
-          <h2 class="font-manrope text-2xl font-bold text-black px-4 min-[400px]:text-4xl">
+          <h2 className="font-manrope text-2xl font-bold text-black px-4 min-[400px]:text-4xl">
             Grab upto 50% off on the selected drugs
           </h2>
         </div>
       </div>
       <div className="">
-        <section class="pt-12 pb-24">
-          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="font-manrope mb-8 text-3xl font-bold text-black max-lg:text-center min-[400px]:text-4xl">
+        <section className="pt-12 pb-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="font-manrope mb-8 text-3xl font-bold text-black max-lg:text-center min-[400px]:text-4xl">
               Available Drugs
             </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:grid-cols-3  xl:grid-cols-4">
-              <a href="javascript:;" class="mx-auto max-w-[384px]">
-                <div class="aspect-square w-full max-w-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:grid-cols-3  xl:grid-cols-4">
+              <Link href="/single-product" className="mx-auto max-w-[384px]">
+                <div className="aspect-square w-full max-w-sm">
                   <img
                     src="https://pagedone.io/asset/uploads/1701157806.png"
                     alt="cream image"
-                    class="h-full w-full rounded-xl"
+                    className="h-full w-full rounded-xl"
                   />
                 </div>
-                <div class="mt-5 flex items-center justify-between">
-                  <div class="">
-                    <h6 class="mb-2 text-xl font-medium leading-8 text-black">
+                <div className="mt-5 flex items-center justify-between">
+                  <div className="">
+                    <h6 className="mb-2 text-xl font-medium leading-8 text-black">
                       Skin care cream
                     </h6>
-                    <h6 class="text-xl font-semibold leading-8 text-indigo-600">
+                    <h6 className="text-xl font-semibold leading-8 text-indigo-600">
                       $74.99
                     </h6>
                   </div>
-                  <button class="group flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200 min-[400px]:p-4">
+                  <button className="group flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200 min-[400px]:p-4">
                     <svg
-                      class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                      className="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
                       xmlns="http://www.w3.org/2000/svg"
                       width="26"
                       height="26"
@@ -55,28 +56,28 @@ export default function Pharmacy() {
                     </svg>
                   </button>
                 </div>
-              </a>
+              </Link>
 
-              <a href="javascript:;" class="mx-auto max-w-[384px]">
-                <div class="aspect-square w-full max-w-sm">
+              <Link href="/single-product" className="mx-auto max-w-[384px]">
+                <div className="aspect-square w-full max-w-sm">
                   <img
                     src="https://pagedone.io/asset/uploads/1701157826.png"
                     alt="cream image"
-                    class="h-full w-full rounded-xl"
+                    className="h-full w-full rounded-xl"
                   />
                 </div>
-                <div class="mt-5 flex items-center justify-between">
-                  <div class="">
-                    <h6 class="mb-2 text-xl font-medium leading-8 text-black">
+                <div className="mt-5 flex items-center justify-between">
+                  <div className="">
+                    <h6 className="mb-2 text-xl font-medium leading-8 text-black">
                       Men’s Facial
                     </h6>
-                    <h6 class="text-xl font-semibold leading-8 text-indigo-600">
+                    <h6 className="text-xl font-semibold leading-8 text-indigo-600">
                       $25
                     </h6>
                   </div>
-                  <button class="group flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200 min-[400px]:p-4">
+                  <button className="group flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200 min-[400px]:p-4">
                     <svg
-                      class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                      className="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
                       xmlns="http://www.w3.org/2000/svg"
                       width="26"
                       height="26"
@@ -92,31 +93,31 @@ export default function Pharmacy() {
                     </svg>
                   </button>
                 </div>
-              </a>
+              </Link>
 
-              <a href="javascript:;" class="mx-auto max-w-[384px]">
-                <div class="relative aspect-square w-full max-w-sm">
+              <Link href="/single-product" className="mx-auto max-w-[384px]">
+                <div className="relative aspect-square w-full max-w-sm">
                   <img
                     src="https://pagedone.io/asset/uploads/1701157844.png"
                     alt="serum bottle image"
-                    class="h-full w-full rounded-xl"
+                    className="h-full w-full rounded-xl"
                   />
-                  <span class="absolute right-3 top-3 z-10 cursor-pointer rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-600 px-2 py-1 text-base font-medium leading-7 text-white min-[400px]:px-4 min-[400px]:py-2">
+                  <span className="absolute right-3 top-3 z-10 cursor-pointer rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-600 px-2 py-1 text-base font-medium leading-7 text-white min-[400px]:px-4 min-[400px]:py-2">
                     20% Off
                   </span>
                 </div>
-                <div class="mt-5 flex items-center justify-between">
-                  <div class="">
-                    <h6 class="mb-2 text-xl font-medium leading-8 text-black">
+                <div className="mt-5 flex items-center justify-between">
+                  <div className="">
+                    <h6 className="mb-2 text-xl font-medium leading-8 text-black">
                       Dark circles serum
                     </h6>
-                    <h6 class="text-xl font-semibold leading-8 text-indigo-600">
+                    <h6 className="text-xl font-semibold leading-8 text-indigo-600">
                       $199.99
                     </h6>
                   </div>
-                  <button class="group flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200 min-[400px]:p-4">
+                  <button className="group flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200 min-[400px]:p-4">
                     <svg
-                      class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                      className="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
                       xmlns="http://www.w3.org/2000/svg"
                       width="26"
                       height="26"
@@ -132,30 +133,30 @@ export default function Pharmacy() {
                     </svg>
                   </button>
                 </div>
-              </a>
-              <a href="javascript:;" class="mx-auto max-w-[384px]">
-                <div class="relative aspect-square w-full max-w-sm">
+              </Link>
+              <Link href="/single-product" className="mx-auto max-w-[384px]">
+                <div className="relative aspect-square w-full max-w-sm">
                   <img
                     src="https://pagedone.io/asset/uploads/1701157844.png"
                     alt="serum bottle image"
-                    class="h-full w-full rounded-xl"
+                    className="h-full w-full rounded-xl"
                   />
-                  <span class="absolute right-3 top-3 z-10 cursor-pointer rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-600 px-2 py-1 text-base font-medium leading-7 text-white min-[400px]:px-4 min-[400px]:py-2">
+                  <span className="absolute right-3 top-3 z-10 cursor-pointer rounded-lg bg-gradient-to-tr from-indigo-600 to-purple-600 px-2 py-1 text-base font-medium leading-7 text-white min-[400px]:px-4 min-[400px]:py-2">
                     20% Off
                   </span>
                 </div>
-                <div class="mt-5 flex items-center justify-between">
-                  <div class="">
-                    <h6 class="mb-2 text-xl font-medium leading-8 text-black">
+                <div className="mt-5 flex items-center justify-between">
+                  <div className="">
+                    <h6 className="mb-2 text-xl font-medium leading-8 text-black">
                       Dark circles serum
                     </h6>
-                    <h6 class="text-xl font-semibold leading-8 text-indigo-600">
+                    <h6 className="text-xl font-semibold leading-8 text-indigo-600">
                       $199.99
                     </h6>
                   </div>
-                  <button class="group flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200 min-[400px]:p-4">
+                  <button className="group flex items-center justify-center rounded-full border border-gray-300 bg-white p-2 shadow-sm shadow-transparent transition-all duration-500 hover:border-gray-400 hover:bg-gray-50 hover:shadow-gray-200 min-[400px]:p-4">
                     <svg
-                      class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
+                      className="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
                       xmlns="http://www.w3.org/2000/svg"
                       width="26"
                       height="26"
@@ -171,7 +172,7 @@ export default function Pharmacy() {
                     </svg>
                   </button>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </section>

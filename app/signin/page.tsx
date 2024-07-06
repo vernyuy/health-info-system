@@ -88,10 +88,10 @@ export default function SignIn() {
           />
         </div>
         <div className="w-full">
-          <div class="flex w-full bg-white p-4 -mb-10">
+          <div className="flex w-full bg-white p-4 -mb-10">
             <Link
               href={"/"}
-              class="rounded-full border border-gray-300 bg-gray-200 p-2 hover:cursor-pointer"
+              className="rounded-full border border-gray-300 bg-gray-200 p-2 hover:cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -115,8 +115,8 @@ export default function HomePage() {
         <div className="h-full w-full">
           <div className="h-full">
             <div className=" px-4 my-auto flex w-full">
-              <div className="mt-40 mb-16 mx-auto  text-center">
-                <div className>
+              <div className="mt-[7.5rem] md:mt-40 mb-16 mx-auto  text-center">
+                <div>
                   <h2 className="text-3xl md:text-4xl font-bold my-3 md:my-6 px-2">
                     Your Health is Our Greatest Priority
                   </h2>
@@ -132,7 +132,7 @@ export default function HomePage() {
                 <div className="mt-6">
                   <div className="flex justify-center ">
                     <Link
-                      href=""
+                      href="/pharmacy"
                       className="text-white flex border-[3px] border-white items-center  bg-black shadow-xl rounded-full px-10 py-2.5"
                     >
                       <span>Explore more</span>
@@ -152,24 +152,24 @@ export default function HomePage() {
                     </Link>
                   </div>
                   <div className="flex pt-4 justify-center ">
-                    <div class="flex -space-x-4 rtl:space-x-reverse">
+                    <div className="flex -space-x-4 rtl:space-x-reverse">
                       <img
-                        class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                        className="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
                         src="https://www.flowbite.com/docs/images/people/profile-picture-5.jpg"
                         alt=""
                       />
                       <img
-                        class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                        className="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
                         src="https://www.flowbite.com/docs/images/people/profile-picture-2.jpg"
                         alt=""
                       />
                       <img
-                        class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                        className="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
                         src="https://www.flowbite.com/docs/images/people/profile-picture-3.jpg"
                         alt=""
                       />
                       <img
-                        class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                        className="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
                         src="https://www.flowbite.com/docs/images/people/profile-picture-4.jpg"
                         alt=""
                       />

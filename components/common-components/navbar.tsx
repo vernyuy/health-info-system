@@ -26,10 +26,10 @@ const Navbar = () => {
   };
   return (
     <div className="h-full w-full sticky top-5 z-[105]">
-      <div className="mx-auto bg-white/40 w-[85%] border bg-white bg-opacity-90  shadow shadow-lg rounded-full">
+      <div className="mx-auto bg-white/40 w-[85%] border bg-white bg-opacity-90  shadow-lg rounded-full">
         <div className="w-full px-8 py-3 bg-transparent">
           <header>
-            <nav className="flex justify-between gap-2 md:gap-0 md:gap-2 text-black">
+            <nav className="flex justify-between gap-2 md:gap-2 text-black">
               <div className="flex items-center">
                 <Image
                   src="amplify.svg"
@@ -40,13 +40,13 @@ const Navbar = () => {
                 />
               </div>
               <div
-                className={`md:relative z-20 bg-white md:bg-transparent md:z-0 duration-1000 md:min-h-fit md:w-auto absolute top-[10%] left-0 w-full flex items-center px-8 ${
+                className={`md:relative z-20 max-md:mt-14 bg-transparent md:bg-transparent md:z-0 duration-1000 md:min-h-fit md:w-auto absolute top-[10%] left-0 w-full flex items-center px-8 ${
                   menu ? " block" : "hidden md:block"
                 }`}
               >
-                <ul className="flex md:flex-row flex-col md:items-center gap-5 w-full md:w-fit">
+                <ul className="flex max-md:bg-blue-100 max-md:rounded-md max-md:p-5 md:flex-row flex-col md:items-center gap-5 w-full md:w-fit">
                   <li>
-                    <Link href={"/home"}>Home</Link>
+                    <Link href={"/"}>Home</Link>
                   </li>
                   <li>
                     <Link href={"/pharmacy"}>Pharmacies</Link>
@@ -54,23 +54,22 @@ const Navbar = () => {
                   <li>
                     <Link href={"/shop"}>Shop</Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href={"/question-response"}>Chat with AI</Link>
-                  </li>
-                  <li className="md:hidden flex flex-row flex-wrap items-center justify-center gap-2 w-full pb-5">
+                  </li> */}
+                  <li className="md:hidden flex flex-row flex-wrap items-center md:justify-center gap-2 w-full pb-5">
                     <Link
                       href="/signin"
-                      className="border border-blue-500 text-blue-500 px-4 text-[12px] py-1 rounded-full whitespace-nowrap w-[35%]"
+                      className="border border-blue-500 text-blue-500 px-4 text-center max-w-24 text-[12px] py-1 rounded-full whitespace-nowrap w-[35%]"
                     >
                       Sign In
                     </Link>
-                    {/* show either signin or signup at a time default hould be signin */}
-                    {/* <Link
+                    <Link
                       href="/signup"
-                      className="bg-blue-500 text-white px-4 text-[12px] py-1 rounded-full whitespace-nowrap w-[35%]"
+                      className="border border-blue-500 text-blue-500 px-4 text-center max-w-24 text-[12px] py-1 rounded-full whitespace-nowrap w-[35%]"
                     >
                       Sign Up
-                    </Link> */}
+                    </Link>
                   </li>
                 </ul>
               </div>
